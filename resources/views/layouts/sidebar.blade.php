@@ -77,7 +77,7 @@
               <a href="#"><i class="fa fa-gear"></i> <span>Setting</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="#">User</a></li>
-                <li><a href="#">Homepage</a></li>
+                <li><a href="{{ route('am-admin.setting.index') }}">General</a></li>
               </ul>
             </li>
           </ul><!-- /.sidebar-menu -->

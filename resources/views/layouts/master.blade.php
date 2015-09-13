@@ -7,25 +7,25 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/bootstrap/css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("bower_components/admin-lte/bootstrap/css/bootstrap.min.css") }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/font-awesome/font-awesome.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("bower_components/admin-lte/plugins/font-awesome/font-awesome.min.css") }}">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/ionic/ionicons.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("bower_components/admin-lte/plugins/ionic/ionicons.min.css") }}">
 
     <!-- Select2 -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/select2/select2.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("bower_components/admin-lte/plugins/select2/select2.min.css") }}">
 
     <!-- DataTables -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.css") }} ">
+    <link rel="stylesheet" href="{{ asset("bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.css") }} ">
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/dist/css/AdminLTE.min.css") }}">
+    <link rel="stylesheet" href="{{ asset("bower_components/admin-lte/dist/css/AdminLTE.min.css") }}">
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect.
     -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/dist/css/skins/skin-blue.min.css")}}">
+    <link rel="stylesheet" href="{{ asset("bower_components/admin-lte/dist/css/skins/skin-blue.min.css")}}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -164,17 +164,17 @@
     <!-- REQUIRED JS SCRIPTS -->
 
     <!-- jQuery 2.1.4 -->
-    <script src="{{ asset("/bower_components/admin-lte/plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>
+    <script src="{{ asset("bower_components/admin-lte/plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>
     <!-- Bootstrap 3.3.5 -->
-    <script src="{{ asset("/bower_components/admin-lte/bootstrap/js/bootstrap.min.js") }}"></script>
+    <script src="{{ asset("bower_components/admin-lte/bootstrap/js/bootstrap.min.js") }}"></script>
     <!-- AdminLTE App -->
-    <script src="{{ asset("/bower_components/admin-lte/dist/js/app.min.js") }}"></script>
+    <script src="{{ asset("bower_components/admin-lte/dist/js/app.min.js") }}"></script>
     <!-- Select2 -->
-    <script src="{{ asset("/bower_components/admin-lte/plugins/select2/select2.full.min.js") }}"></script>
+    <script src="{{ asset("bower_components/admin-lte/plugins/select2/select2.full.min.js") }}"></script>
 
     <!-- DataTables -->
-    <script src="{{ asset("/bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js") }}"></script>
-    <script src="{{ asset("/bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.min.js") }}"></script>
+    <script src="{{ asset("bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js") }}"></script>
+    <script src="{{ asset("bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.min.js") }}"></script>
 
     <!-- Page Script -->
     <script>
@@ -198,7 +198,7 @@
     </script>
 
     <!-- CK Editor -->
-    <script src="{{ asset("/bower_components/admin-lte/plugins/ckeditor/ckeditor.js") }}"></script>
+    <script src="{{ asset("bower_components/admin-lte/plugins/ckeditor/ckeditor.js") }}"></script>
     <script>
       $(function () {
         // Replace the <textarea id="editor1"> with a CKEditor
