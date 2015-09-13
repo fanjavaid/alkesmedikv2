@@ -30,7 +30,7 @@
     <div class="form-group">
       {!! Form::label('preview', 'Preview', ['class' => 'required']) !!}
       <p>
-        <img src="{{ url($media->url) }}" style="width:30%">
+        <img src="{{ asset("$media->url") }}" style="width:30%">
       </p>
     </div>  
 

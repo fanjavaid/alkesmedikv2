@@ -28,7 +28,7 @@
                     <tbody>
                     @foreach($medias as $media)
                       <tr>
-                        <td width="85px"><img src="{{ url($media->url) }}" style="width:80px" /></td>
+                        <td width="85px"><img src="{{ asset("$media->url") }}" style="width:80px" /></td>
                         <td>
                           {{ $media->title }} <br/>
                           <strong style="color:#3c8dbc">{{ strtoupper(pathinfo($media->path, PATHINFO_EXTENSION)) }}</strong>
