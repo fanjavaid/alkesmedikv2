@@ -18,10 +18,10 @@
 </div>
 @endif
 
-{!! Form::model($product, ['method'=>'PATCH', 'route' => ['am-admin.product.store', $product->id], 'role' => 'form', 'enctype' => 'multipart/form-data']); !!}
+{!! Form::model($product, ['method'=>'PATCH', 'route' => ['am-admin.product.update', $product->id], 'role' => 'form', 'enctype' => 'multipart/form-data']); !!}
 <div class="box box-primary">
 <div class="box-header with-border">
-  <h3 class="box-title">Add New</h3>
+  <h3 class="box-title">{{ $product->product_name }} - Edit</h3>
 </div><!-- /.box-header -->
 <!-- form start -->
   <div class="box-body">
@@ -50,13 +50,13 @@
       <div class="col-sm-2">
         <div class="form-group">
           {!! Form::label('price','Price') !!}
-          {!! Form::text('price', 0, ['class' => 'form-control']) !!}
+          {!! Form::text('price', null, ['class' => 'form-control']) !!}
         </div>
       </div>
       <div class="col-sm-4">
         <div class="form-group">
           {!! Form::label('discount','Discount (%)') !!}
-          {!! Form::text('discount', 0, ['class' => 'form-control']) !!}
+          {!! Form::text('discount', null, ['class' => 'form-control']) !!}
         </div>
       </div>
       <div class="col-sm-4">
@@ -78,6 +78,13 @@
           {!! Form::label('Featured Image') !!}
           {!! Form::file('featured_image', null, ['class' => 'form-control']) !!}
           <p class="help-block">Allowed extension : png, jpg, jpeg, bmp.</p>
+          <p>
+            @if(File::exists(base_path() . '/public/images/product/' . $product->featured_image) && $product->featured_image != null && $product->featured_image != "")
+                <img src="{{ url('/images/product/' . $product->featured_image) }}" style="width:30%">
+                <br>
+                <a href="{{ route('product.removeImage', $product->featured_image) }}" class="btn btn-danger btn-xs"><i class="fa fa-remove"></i> Remove Image</a>
+            @endif
+          </p>
         </div>
       </div>
     </div>
@@ -94,32 +101,17 @@
     </div><!-- /.box-header -->
     
     <div class="box-body">
-      @if ($attributes != null)
-        @foreach ($attributes as $attr)
-          <div class="form-group">
-            {!! Form::label('', $attr->attribute_name) !!}
-
-            @foreach ($product->attributes as $pAttr)
-                <?php
-                  if ($attr->id == $pAttr->id) {
-                ?>
-                    @if ($attr->type == "text")
-                      <input type="text" name="attributes[{{ $attr->id }}][value]" value="{{ $pAttr->pivot->value }}" class="form-control" />
-                    @else
-                      <textarea id="content2" name="attributes[{{ $attr->id }}][value]">{{ $pAttr->pivot->value }}</textarea>
-                    @endif
-                <?php
-                    break;
-                  } else {
-                    echo "Demo";
-                  }
-                ?>
-            @endforeach
-
-          </div>
+    @if ($attrElements != null)
+        {{-- START: loop attributes --}}
+        @foreach ($attrElements as $attr)
+            <div class="form-group">
+              {!! Form::label('attribute', $attr['name']) !!}
+              {!! $attr['element'] !!}
+            </div>
         @endforeach
-      @endif
-    </div> 
+        {{-- END: loop attributes --}}
+    @endif
+</div>
 
     <div class="box-footer">
         {!! Form::submit('Save Changes', ['class' => 'btn btn-primary']) !!}
