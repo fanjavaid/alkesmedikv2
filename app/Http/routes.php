@@ -12,6 +12,10 @@
 */
 
 Route::get('/', function () {
+    return 'Front End is under development';
+});
+
+Route::get('/am-admin', function () {
     return view('welcome');
 });
 
@@ -40,5 +44,9 @@ Route::group(array('namespace' => 'Admin'), function() {
 	Route::get('am-admin/page/removeImage/{imageName}', ['as' => 'page.removeImage', 'uses' => 'PageController@removeImage']);
 
 	Route::resource('am-admin/attribute', 'AttributeController');
+
 	Route::resource('am-admin/product', 'ProductController');
+	Route::get('am-admin/product/removeImage/{imageName}', ['as' => 'product.removeImage', 'uses' => 'ProductController@removeImage']);
+
+	Route::resource('am-admin/setting', 'SettingController');
 });
