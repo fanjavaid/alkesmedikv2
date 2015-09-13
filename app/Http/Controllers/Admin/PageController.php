@@ -209,6 +209,9 @@ class PageController extends Controller
         $page->delete();
 
         $this->removeImage($page->featured_image);
+
+        Session::flash('flash_message', 'Page successfully deleted!');
+        return redirect()->back();
     }
 
     public function removeImage($imageName) {
