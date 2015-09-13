@@ -13,6 +13,14 @@ class CreateSettingsTable extends Migration
     public function up()
     {
         //
+        Schema::create('settings', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('site_title');
+            $table->string('tagline');
+            $table->string('email_address');
+            $table->string('site_banner');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,5 +31,6 @@ class CreateSettingsTable extends Migration
     public function down()
     {
         //
+        Schema::drop('settings');
     }
 }

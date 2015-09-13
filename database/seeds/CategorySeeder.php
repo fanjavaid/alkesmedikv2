@@ -18,8 +18,8 @@ class CategorySeeder extends Seeder
 
         for ($i=0; $i < 20; $i++) { 
         	Category::create([
-        		'category_name' => $faker->sentence($nbWords = 4),
-        		'description' => $faker->text($maxNbChars = 140)
+        		'category_name' => $faker->sentence($nbWords = 2),
+        		'description' => $faker->text($maxNbChars = 100)
         	]);
         }
     }

@@ -23,10 +23,15 @@ class CreateMediasCategoriesTable extends Migration
         Schema::table('medias_categories', function (Blueprint $table) {
             $table->foreign('category_id')
                   ->references('id')
-                  ->on('categories');
+                  ->on('categories')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
+                  
             $table->foreign('media_id')
                   ->references('id')
-                  ->on('medias');
+                  ->on('medias')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
         });
     }
 
